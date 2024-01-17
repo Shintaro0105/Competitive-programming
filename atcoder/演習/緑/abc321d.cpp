@@ -22,5 +22,22 @@ const int mod=998244353;
 const int inf=1e9+1;
 
 int main(){
+    ll n,m;cin>>n>>m;
+    ll p;cin>>p;
+    vector<ll> a(n),b(m);
+    rep(i,n)cin>>a[i];
+    rep(i,m)cin>>b[i];
+    sort(ALL(b));
+    vector<ll> s(m+1,0);
+    rep(i,m)s[i+1]=s[i]+b[i];
+    ll ans=0;
+    rep(i,n){
+        auto itr=lower_bound(ALL(b),p-a[i]);
+        ll num=(int)(itr-b.begin());
+        ans+=(m-num)*p;
+        ans+=s[num]+(num*a[i]);
+        //cout<<ans<<endl;
+    }
+    cout<<ans<<endl;
     return 0;
 }
