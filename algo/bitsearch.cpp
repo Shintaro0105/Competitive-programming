@@ -1,5 +1,8 @@
 #include <iostream>
+#include <algorithm>
+#include <string>
 #define rep(i,n) for(int i = 0;i < (n);i++)
+#define ALL(a) (a).begin(),(a).end()
 using namespace std;
 
 int main(){
@@ -13,7 +16,7 @@ int main(){
             else s+='0';
             l>>=1;
         }
-        reverse(s.begin(),s.end());
+        reverse(ALL(s));
         cout<<s<<endl;
     }
     return 0;
