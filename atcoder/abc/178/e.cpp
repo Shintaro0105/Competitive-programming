@@ -1,10 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
-#include <algorithm>
-#include <functional>
 #define rep(i,n) for(int i = 0;i < (n);i++)
-#define ALL(a) (a).begin(),(a).end()
 using namespace std;
 using ll = long long int;
 
